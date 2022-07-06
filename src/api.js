@@ -1,6 +1,6 @@
-export const fetchCats = () => {
+export const fetchCats = (limit, page) => {
   return fetch(
-    `https://api.thecatapi.com/v1/images/search?limit=15&page=0&order=DESC`
+    `https://api.thecatapi.com/v1/images/search?limit=${limit}&page=${page}&order=DESC`
   )
     .then((res) => res.json())
     .catch((e) => console.log(e));
