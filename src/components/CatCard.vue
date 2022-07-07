@@ -1,7 +1,7 @@
 <template>
   <article class="card">
     <img :src="cat.url" alt="" />
-    <button @click="addToFavoriteList(cat)" class="like-btn">
+    <button @click="updateFavoriteList(cat)" class="like-btn">
       <span v-if="buttonState" class="heart"></span>
       <span v-else class="heart-active"></span>
     </button>
@@ -21,14 +21,9 @@ export default {
     buttonLabel: Boolean,
   },
   methods: {
-    addToFavoriteList(cat) {
+    updateFavoriteList(cat) {
       this.buttonState = !this.buttonState;
       store.setFavoriteCats(cat);
-    },
-  },
-  computed: {
-    setButtonLabel() {
-      return this.buttonState ? "Like" : "Dislike";
     },
   },
 };
