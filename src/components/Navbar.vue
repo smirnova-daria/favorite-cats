@@ -3,15 +3,15 @@
   <div class="container">
     <nav>
       <router-link
-        to="/all-cats"
+        to="/favorite-cats/all-cats"
         class="nav-link"
-        :class="$route.path === '/all-cats' ? 'active' : ''"
+        :class="$route.path === '/favorite-cats/all-cats' ? 'active' : ''"
         >Все котики</router-link
       >
       <router-link
-        to="/favorite"
+        to="/favorite-cats/favorite"
         class="nav-link"
-        :class="$route.path === '/favorite' ? 'active' : ''"
+        :class="$route.path === '/favorite-cats/favorite' ? 'active' : ''"
         >Любимые котики</router-link
       >
     </nav>
