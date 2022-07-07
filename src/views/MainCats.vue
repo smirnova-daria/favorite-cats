@@ -1,13 +1,16 @@
 <template>
-  <div>
-    Cats
-    <cat-card
-      v-for="cat in cats"
-      :cat="cat"
-      :key="cat.id"
-      :buttonLabel="true"
-    ></cat-card>
-  </div>
+  <main>
+    <div class="container">
+      <div class="cards">
+        <cat-card
+          v-for="cat in cats"
+          :cat="cat"
+          :key="cat.id"
+          :buttonLabel="true"
+        ></cat-card>
+      </div>
+    </div>
+  </main>
 </template>
 <script>
 import { fetchCats } from "@/api";

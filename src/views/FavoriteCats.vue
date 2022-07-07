@@ -1,12 +1,16 @@
 <template>
   <div>
-    Favorite
-    <cat-card
-      v-for="cat in favoriteCats"
-      :key="cat.id"
-      :cat="cat"
-      :buttonLabel="false"
-    ></cat-card>
+    <div class="container">
+      Favorite
+      <div class="cards">
+        <cat-card
+          v-for="cat in favoriteCats"
+          :key="cat.id"
+          :cat="cat"
+          :buttonLabel="false"
+        ></cat-card>
+      </div>
+    </div>
   </div>
 </template>
 
