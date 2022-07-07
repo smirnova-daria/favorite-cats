@@ -1,9 +1,14 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+import FavoriteCats from "@/views/FavoriteCats";
+import MainCats from "@/views/MainCats";
 
-const routes = [];
+const routes = [
+  { path: "/", component: MainCats },
+  { path: "/favorite-cats", component: FavoriteCats },
+];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
